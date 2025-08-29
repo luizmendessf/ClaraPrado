@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -45,29 +46,31 @@ export default function HomePage() {
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="#about" className={`transition-all duration-300 font-medium ${
+              <Link href="/" className={`transition-all duration-300 font-medium ${
                 isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white hover:text-gray-200"
               }`}>
-                Sobre
+                Home
               </Link>
-              <Link href="#achievements" className={`transition-all duration-300 font-medium ${
+              <Link href="/publications" className={`transition-all duration-300 font-medium ${
                 isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white hover:text-gray-200"
               }`}>
-                Conquistas
+                Publications
               </Link>
-              <Link href="#contact" className={`transition-all duration-300 font-medium ${
+              <Link href="/curriculum" className={`transition-all duration-300 font-medium ${
                 isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white hover:text-gray-200"
               }`}>
-                Contato
+                Curriculum
               </Link>
             </div>
+            <Link href="#contact">
             <Button className={`transition-all duration-300 rounded-full px-6 ${
               isScrolled 
                 ? "bg-gray-900 hover:bg-gray-800 text-white" 
                 : "bg-white hover:bg-gray-100 text-gray-900"
             }`}>
-              Fale Conosco
+              Contact
             </Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -94,19 +97,19 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                  Excelência
-                  <span className="block text-gray-200">Jurídica</span>
+                  Bilingual Law Student &
+                  <span className="block text-gray-200">Legal Assistant</span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed">
-                  Dedicação e resultados comprovados com mais de 4 anos transformando desafios jurídicos em soluções eficazes
+                  Law student at Universidade Federal de Sergipe with a 4.0 GPA, strong background in legal research and leadership, pursuing an international legal career in the U.S. or Canada.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                  Entre em Contato
+                  Explore My Work
                 </Button>
                 <Button variant="outline" size="lg" className="border-white text-black bg-white/90 hover:bg-white hover:text-gray-900 px-8 py-4 text-lg rounded-full transition-all duration-300">
-                  Saiba Mais
+                  See Full Curriculum
                 </Button>
               </div>
             </div>
@@ -128,12 +131,12 @@ export default function HomePage() {
               <div className="space-y-8">
                 <div className="inline-flex items-center px-4 py-2 bg-gray-900/5 border border-gray-200 rounded-full">
                   <Scale className="h-4 w-4 text-gray-700 mr-2" />
-                  <span className="text-sm font-medium text-gray-700">Sobre Clara Prado</span>
+                  <span className="text-sm font-medium text-gray-700">Building a Global Legal Career</span>
                 </div>
                 <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Advocacia com
+                  Bilingual Law Student &
                   <span className="block bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                    Propósito
+                    Legal Assistant
                   </span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed font-light">
@@ -169,7 +172,7 @@ export default function HomePage() {
                     <Users className="h-7 w-7 text-white" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-gray-900">Atendimento Personalizado</h3>
+                    <h3 className="text-xl font-bold text-gray-900">Platform Founder</h3>
                     <p className="text-gray-600 leading-relaxed">Dedicação exclusiva a cada cliente com acompanhamento integral</p>
                   </div>
                 </div>
@@ -220,12 +223,12 @@ export default function HomePage() {
           <div className="text-center space-y-6 mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-gray-900/5 border border-gray-200 rounded-full">
               <Trophy className="h-4 w-4 text-gray-700 mr-2" />
-              <span className="text-sm font-medium text-gray-700">Conquistas e Reconhecimento</span>
+              <span className="text-sm font-medium text-gray-700">Conquistas e International Publications</span>
             </div>
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Trajetória de
               <span className="block bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                Excelência
+                Bilingual Law Student &
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
@@ -250,7 +253,7 @@ export default function HomePage() {
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <Badge variant="outline" className="text-gray-700 border-gray-300">
-                      Excelência Acadêmica
+                      Bilingual Law Student & Acadêmica
                     </Badge>
                   </div>
                 </CardContent>
@@ -287,14 +290,14 @@ export default function HomePage() {
                     <Star className="h-10 w-10 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-2xl font-bold text-gray-900">Reconhecimento</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">International Publications</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Reconhecida pela qualidade do atendimento e pela eficiência na resolução de casos
+                      Published academic works in Portugal, Canada, Brazil, and Argentina
                     </p>
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <Badge variant="outline" className="text-gray-700 border-gray-300">
-                      Excelência Profissional
+                      Bilingual Law Student & Profissional
                     </Badge>
                   </div>
                 </CardContent>
@@ -313,12 +316,12 @@ export default function HomePage() {
               <div className="text-gray-600 font-medium">Casos Resolvidos</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl lg:text-5xl font-bold text-gray-900">95%</div>
-              <div className="text-gray-600 font-medium">Taxa de Sucesso</div>
+              <div className="text-4xl lg:text-5xl font-bold text-gray-900">4.0</div>
+              <div className="text-gray-600 font-medium">GPA</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl lg:text-5xl font-bold text-gray-900">24h</div>
-              <div className="text-gray-600 font-medium">Tempo de Resposta</div>
+              <div className="text-4xl lg:text-5xl font-bold text-gray-900">4+</div>
+              <div className="text-gray-600 font-medium">Years Experience</div>
             </div>
           </div>
         </div>
@@ -336,16 +339,16 @@ export default function HomePage() {
           <div className="text-center space-y-6 mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-gray-900/5 border border-gray-200 rounded-full">
               <Phone className="h-4 w-4 text-gray-700 mr-2" />
-              <span className="text-sm font-medium text-gray-700">Entre em Contato</span>
+              <span className="text-sm font-medium text-gray-700">Explore My Work</span>
             </div>
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Vamos Conversar
+              Let's Discuss
               <span className="block bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                Sobre Seu Caso
+                International Opportunities
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
-              Estou aqui para ajudar você a encontrar as melhores soluções jurídicas. Entre em contato e vamos discutir como posso auxiliar em seu caso.
+              Open to international legal opportunities in the U.S. and Canada. Let's connect to discuss potential collaborations and career opportunities.
             </p>
           </div>
           
@@ -425,13 +428,13 @@ export default function HomePage() {
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-gray-700">Mensagem</label>
                       <Textarea 
-                        placeholder="Descreva seu caso ou dúvida..." 
+                        placeholder="Tell me about your project or opportunity..." 
                         rows={5} 
                         className="border-gray-300 focus:border-gray-500 rounded-xl bg-white/50" 
                       />
                     </div>
                     <Button className="w-full bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white py-4 rounded-xl text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                      Enviar Mensagem
+                      Send Message
                     </Button>
                   </div>
                 </CardContent>
@@ -480,14 +483,23 @@ export default function HomePage() {
               <h4 className="text-lg font-bold text-gray-900">Links Rápidos</h4>
               <div className="space-y-3">
                 <Link href="#about" className="block text-gray-600 hover:text-gray-900 transition-colors">
-                  Sobre Clara Prado
+                  Building a Global Legal Career
                 </Link>
                 <Link href="#achievements" className="block text-gray-600 hover:text-gray-900 transition-colors">
                   Conquistas
                 </Link>
                 <Link href="#contact" className="block text-gray-600 hover:text-gray-900 transition-colors">
                   Contato
-                </Link>
+              </Link>
+              <Link href="/publications" className={`transition-all duration-300 font-medium ${
+                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white hover:text-gray-200"
+              }`}>
+                Publications
+              </Link>
+              <Link href="/curriculum" className={`transition-all duration-300 font-medium ${
+                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white hover:text-gray-200"
+              }`}>
+                Curriculum                </Link>
                 <Link href="/content" className="block text-gray-600 hover:text-gray-900 transition-colors">
                   Conteúdo
                 </Link>
