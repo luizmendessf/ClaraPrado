@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button"
+"use client"
+
+import Footer from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
@@ -380,5 +382,6 @@ export default function ContentPage() {
         </div>
       </footer>
     </div>
+      <Footer />
   )
 }

@@ -31,7 +31,7 @@ export default function ParticlesBackground() {
 
     const createParticles = () => {
       const particles: Particle[] = []
-      const particleCount = Math.floor((window.innerWidth * window.innerHeight) / 8000)
+      const particleCount = Math.floor((window.innerWidth * window.innerHeight) / 20000)
       
       const colors = [
         "rgba(0, 0, 0, 0.2)",   // slate-400 very subtle

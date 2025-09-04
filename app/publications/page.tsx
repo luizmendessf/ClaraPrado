@@ -1,11 +1,13 @@
+import Footer from "@/components/footer"
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { BookOpen, ExternalLink, Calendar, MapPin } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
+import Navigation from "@/components/navigation"
+import ParticlesBackground from "@/components/particles-background"
 
 export default function PublicationsPage() {
   const publications = [
@@ -15,84 +17,91 @@ export default function PublicationsPage() {
       publisher: "University of Coimbra Press, Portugal",
       summary: "Comprehensive guide to municipal financial management and governance frameworks",
       type: "Book",
-      country: "Portugal"
+      country: "Portugal",
     },
     {
-      title: "The Implementation of Value Added Tax: A Comparative Study between Brazil and Canada",
+      title:
+        "The Implementation of Value Added Tax: A Comparative Study between Brazil and Canada",
       year: "2024",
       publisher: "Academic Forum, BCBA – Canada",
-      summary: "Comparative analysis of VAT implementation strategies and their economic impacts",
+      summary:
+        "Comparative analysis of VAT implementation strategies and their economic impacts",
       type: "Academic Paper",
-      country: "Canada"
+      country: "Canada",
     },
     {
       title: "Taxation in the Digital Age: Challenges and Perspectives in Brazil",
       year: "2024",
       publisher: "ASSAT Book – Brazil",
-      summary: "Examination of digital taxation challenges and regulatory frameworks in Brazil",
+      summary:
+        "Examination of digital taxation challenges and regulatory frameworks in Brazil",
       type: "Book Chapter",
-      country: "Brazil"
+      country: "Brazil",
     },
     {
-      title: "E-Commerce and Data Protection in Digital Companies: The Impact of Emerging Technologies on Commerce",
+      title:
+        "E-Commerce and Data Protection in Digital Companies: The Impact of Emerging Technologies on Commerce",
       year: "2023",
       publisher: "Revista de Derecho Empresario – Argentina",
-      summary: "Analysis of data protection regulations and their impact on digital commerce",
+      summary:
+        "Analysis of data protection regulations and their impact on digital commerce",
       type: "Journal Article",
-      country: "Argentina"
-    }
+      country: "Argentina",
+    },
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CP</span>
-              </div>
-              <span className="font-semibold text-gray-900">Clara Prado</span>
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</Link>
-              <Link href="/publications" className="text-gray-900 font-medium">Publications</Link>
-              <Link href="/curriculum" className="text-gray-600 hover:text-gray-900 transition-colors">Curriculum</Link>
-              <Link href="/#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="publications" />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-gray-900 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gray-700 rounded-full blur-3xl"></div>
-        </div>
+      {/* === HERO === */}
+      <section className="relative pt-40 pb-20 flex items-center justify-center overflow-hidden">
+        {/* Camada de fundo: gradiente escuro → branco para integrar com a próxima seção */}
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900 via-neutral-900/70 to-white z-0"></div>
+        <ParticlesBackground />
         
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="text-center space-y-6 mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-gray-900/5 border border-gray-200 rounded-full">
-              <BookOpen className="h-4 w-4 text-gray-700 mr-2" />
-              <span className="text-sm font-medium text-gray-700">Academic Contributions</span>
+        <div className="relative z-10 container mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Texto */}
+            <div className="text-white space-y-6">
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/20 rounded-full backdrop-blur-sm">
+                <BookOpen className="h-4 w-4 text-white mr-2" />
+                <span className="text-sm font-medium text-white">Academic Contributions</span>
+              </div>
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                Publications
+                <span className="block text-gray-300">& Research</span>
+              </h1>
+              <p className="text-xl text-gray-200 max-w-2xl">
+                Exploring international taxation, digital law, and comparative legal studies through academic
+                research and publications across multiple jurisdictions.
+              </p>
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Publications
-              <span className="block bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                & Research
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
-              Exploring international taxation, digital law, and comparative legal studies through academic research and publications across multiple jurisdictions.
-            </p>
+
+            {/* Imagem com fundo de retângulo cinza, como no exemplo */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative group w-[450px] h-[550px]">
+                {/* O Retângulo Cinza de Fundo */}
+                <div className="absolute inset-0 bg-zinc-800 rounded-2xl transform -rotate-3 transition-all duration-300 group-hover:scale-105 group-hover:-rotate-2 shadow-lg"></div>
+
+                {/* A Imagem Principal */}
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl transform rotate-2 transition-all duration-300 group-hover:scale-105 group-hover:rotate-0">
+                  <Image
+                    src="/images/e804d39d-5d6b-4a8d-8250-1650d980dba1.jpg"
+                    alt="Research presentation"
+                    layout="fill"
+                    objectFit="cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Publications Grid */}
-      <section className="py-20">
+      {/* === Publications Grid === */}
+      <section className="py-20 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid gap-8 md:gap-12">
             {publications.map((publication, index) => (
@@ -141,7 +150,7 @@ export default function PublicationsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* === CTA Section === */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="relative">
@@ -158,11 +167,19 @@ export default function PublicationsPage() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold px-8 py-4 rounded-2xl">
+                  <Button
+                    size="lg"
+                    variant="secondary"
+                    className="bg-white text-gray-900 hover:bg-gray-100 font-semibold px-8 py-4 rounded-2xl"
+                  >
                     <ExternalLink className="h-5 w-5 mr-2" />
                     Contact Me
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-2xl">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-2xl"
+                  >
                     <BookOpen className="h-5 w-5 mr-2" />
                     View Curriculum
                   </Button>
@@ -173,5 +190,5 @@ export default function PublicationsPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

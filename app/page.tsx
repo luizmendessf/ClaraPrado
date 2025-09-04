@@ -61,6 +61,11 @@ export default function HomePage() {
               }`}>
                 Curriculum
               </Link>
+              <Link href="/videos" className={`transition-all duration-300 font-medium ${
+                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white hover:text-gray-200"
+              }`}>
+                Videos
+              </Link>
             </div>
             <Link href="#contact">
             <Button className={`transition-all duration-300 rounded-full px-6 ${
@@ -485,6 +490,11 @@ export default function HomePage() {
                 <Link href="#about" className="block text-gray-600 hover:text-gray-900 transition-colors">
                   Building a Global Legal Career
                 </Link>
+              <Link href="/videos" className={`transition-all duration-300 font-medium ${
+                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white hover:text-gray-200"
+              }`}>
+                Videos
+              </Link>
                 <Link href="#achievements" className="block text-gray-600 hover:text-gray-900 transition-colors">
                   Conquistas
                 </Link>
